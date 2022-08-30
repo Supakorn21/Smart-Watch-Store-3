@@ -1,0 +1,264 @@
+body {
+  background: #f1f1f1;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-content {
+  display: flex;
+  flex-flow: row;
+  z-index: 5;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  column-gap: 2%;
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+  height: 220px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-face,
+.card-back {
+  backface-visibility: hidden;
+  box-shadow: 2px 2px #666;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    143deg,
+    rgba(241, 17, 33, 1) 0%,
+    rgba(244, 255, 57, 1) 52%,
+    rgba(241, 17, 33, 1) 100%
+  );
+
+  border-radius: 10px;
+  /* filter: blur(2px); */
+  color: #fff;
+  font-family: sans-serif;
+  transition: 1s;
+  z-index: 1;
+}
+
+.card-bankname {
+  font-style: italic;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  text-shadow: 1px 0 2px #000;
+}
+
+.card-banklogo {
+  font-style: italic;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  text-shadow: 1px 0 2px #000;
+}
+
+.card-chip {
+  position: absolute;
+  top: 25%;
+  left: 50px;
+  width: 65px;
+}
+
+.card-chip-arrow {
+  border: 15px solid;
+  border-color: transparent #fff transparent transparent;
+  position: absolute;
+  top: 33%;
+  left: 10px;
+}
+
+.card-number {
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 55%;
+  text-shadow: 1px 0 2px #000;
+}
+
+.card-validate {
+  position: absolute;
+  top: 62%;
+  left: 35%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.card-validate .text {
+  padding-right: 10px;
+  font-size: 10px;
+}
+
+.card-validate .date {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.card-holder {
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 4px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 7%;
+  left: 30px;
+  text-shadow: 1px 0 2px #000;
+}
+
+.card-type {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ef991a;
+  position: absolute;
+  right: 30px;
+  bottom: 7%;
+}
+
+.card-type1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e4001a;
+  position: absolute;
+  right: 52px;
+  bottom: 7%;
+}
+
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    150deg,
+    rgba(241, 17, 33, 1) 19%,
+    rgba(231, 241, 65, 1) 52%,
+    rgba(241, 17, 33, 1) 94%
+  );
+  border-radius: 10px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.card-blackbar {
+  width: 100%;
+  height: 40px;
+  background: #000;
+  position: absolute;
+  top: 10%;
+}
+
+.card-whitebar {
+  width: 85%;
+  height: 26px;
+  background: #fff;
+  position: absolute;
+  top: 35%;
+  color: #000;
+  padding-right: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.card-sticker {
+  width: 77%;
+  height: 34px;
+  background: #ccc;
+  position: absolute;
+  top: 33%;
+}
+
+.card-sticker hr {
+  margin: 2px 0;
+}
+
+.card-terms {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  font-size: 10px;
+}
+
+.card-terms p {
+  text-align: justify;
+}
+
+/* card back */
+
+.form-content .input-wrap {
+  margin: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.form-content .input-wrap label {
+  color: #303030;
+  left: 0;
+  user-select: none;
+  z-index: -1;
+  color: #d8d8d8;
+  transition: all 0.5s ease;
+}
+
+.form-content .input-wrap input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  outline: 0 !important;
+  width: 100%;
+  color: #303030;
+  line-height: 2.35rem;
+  font-size: 1.3rem;
+}
+
+.form-content .half {
+  width: 49%;
+  position: relative;
+}
+
+.form-content .pay-btn {
+  cursor: pointer;
+  left: 0;
+  width: 100%;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #e4001a;
+  color: #fefefe;
+  border-radius: 8px;
+}

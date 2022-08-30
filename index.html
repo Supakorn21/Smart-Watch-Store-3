@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weStride|Credit Card</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <div class="card">
+          <div class="card-container">
+            <div class="card-face">
+              <div class="card-face-logo">
+                <h2 id="bank-name-show" class="card-bankname">Bank Name</h2>
+                <h2 class="card-banklogo">Logo Here</h2>
+                <img
+                  src="https://img.icons8.com/fluency/344/sim-card-chip.png"
+                  alt=""
+                  class="card-chip"
+                />
+                <div class="card-chip-arrow"></div>
+                <div id="card-no-show" class="card-number">
+                  0000 1111 2222 9999
+                </div>
+                <p class="card-validate">
+                  <span class="text">
+                    Valid
+                    <br />
+                    Date
+                  </span>
+                  <span id="card-expire-show" class="date">08/21</span>
+                </p>
+                <div id="owner-name-show" class="card-holder">Owner Name</div>
+                <div class="card-type"></div>
+                <div class="card-type1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <div class="card-back">
+              <div class="card-blackbar"></div>
+              <div id="cvc-code-show" class="card-whitebar">535</div>
+              <div class="card-sticker">
+                <hr />
+                <hr />
+                <hr />
+                <hr />
+                <hr />
+                <hr />
+                <hr />
+                <hr />
+              </div>
+              <div class="card-terms">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Repellendus sit repellat nesciunt libero tempora voluptatem,
+                  est quidem, quis nulla ducimus at architecto consequatur illo
+                  laborum. Quod distinctio et mollitia voluptates perferendis
+                  eligendi
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Harum est saepe ab distinctio, sit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-content">
+        <div class="input-wrap">
+          <label>Owner Name</label>
+          <input
+            id="owner-name"
+            class="input-field"
+            type="text"
+            maxlength="19"
+          />
+        </div>
+        <div class="input-wrap">
+          <label>Bank Name</label>
+          <input
+            id="bank-name"
+            class="input-field"
+            type="text"
+            maxlength="12"
+          />
+        </div>
+        <div class="input-wrap">
+          <label>Card Number</label>
+          <input id="card-no" class="input-field" type="text" maxlength="16" />
+        </div>
+        <div class="input-wrap half">
+          <label>MM / YY</label>
+          <input
+            id="card-expire"
+            class="input-field"
+            type="text"
+            maxlength="4"
+          />
+        </div>
+        <div class="input-wrap half">
+          <label>CVC Code</label>
+          <input
+            id="cvc-code"
+            class="input-field password-field"
+            type="text"
+            maxlength="3"
+          />
+        </div>
+        <div class="pay-btn btn">Pay Now</div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
